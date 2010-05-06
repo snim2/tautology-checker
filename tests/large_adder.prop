@@ -1,0 +1,1 @@
+NOT a AND b AND cin OR a AND NOT b AND cin OR a AND b AND NOT cin OR a AND b AND cin

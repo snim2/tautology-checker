@@ -1,0 +1,65 @@
+Script started on Mon Sep 10 10:43:12 2001
+[snim2@n227-4 checker]$ ./checker tests/peirces_law.prop
+
+	227CS Coursework1: A Tautology Checker for Propositional Calculus
+	-----------------------------------------------------------------
+
+Input file: tests/peirces_law.prop
+----------
+((P => Q)=>P)=>P
+
+
+Parsing:
+-------
+Lexing: (
+Shifting: 5 (
+Lexing: (
+Shifting: 5 (
+Lexing: P
+Shifting: 9 Atom(P)
+Lexing: =>
+Shifting: 1 IMPL
+Lexing: Q
+Shifting: 9 Atom(Q)
+Lexing: )
+Reducing: 1 IMPL
+Shifting: 6 )
+Lexing: =>
+Reducing: 6 )
+Shifting: 1 IMPL
+Lexing: P
+Shifting: 9 Atom(P)
+Lexing: )
+Reducing: 1 IMPL
+Shifting: 6 )
+Lexing: =>
+Reducing: 6 )
+Shifting: 1 IMPL
+Lexing: P
+Shifting: 9 Atom(P)
+Reducing: 1 IMPL
+
+Abstract syntax tree:
+--------------------
+((P => Q) => P) => P
+
+RESULT OF formula.removeImplications():
+--------------------------------------
+(¬(¬(¬P \/ Q) \/ P) \/ P)
+
+RESULT OF formula.toNnf():
+-------------------------
+(((¬P \/ Q) /\ ¬P) \/ P)
+
+RESULT OF formula.nnfToCnf():
+----------------------------
+(((¬P \/ Q) \/ P) /\ (¬P \/ P))
+
+RESULT OF formula.simplifyCnf():
+-------------------------------
+TRUE
+
+Your formula is a tautology.
+
+[snim2@n227-4 checker]$ 
+Script done on Mon Sep 10 10:43:21 2001
