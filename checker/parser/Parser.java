@@ -11,27 +11,30 @@ import java.io.InputStream;
  *
  * Input language:<p>
  * 
+ * <code>
  * Prop ::= TT<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| FF<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;alpha&gt;&lt;alphanum&gt;*<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| ( Prop )<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| NOT Prop<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Prop AND Prop<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Prop OR Prop<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Prop =&gt; Prop<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Prop &lt;=&gt; Prop<p>
- *
+ *       | FF<br>
+ *       | &lt;alpha&gt;&lt;alphanum&gt;*<br>
+ *       | ( Prop )<br>
+ *       | NOT Prop<br>
+ *       | Prop AND Prop<br>
+ *       | Prop OR Prop<br>
+ *       | Prop =&gt; Prop<br>
+ *       | Prop &lt;=&gt; Prop<p>
+ * </code>
+ * 
  * Abstract syntax tree grammar:<p>
  * 
+ * <code>
  * Formula ::= Atom(String) <br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| True <br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| False <br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Neg(Formula) <br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Conj(Formula, Formula) <br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Disj(Formula, Formula) <br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Impl(Formula, Formula) <br>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Iff(Formula, Formula) <p>
- *
+ *       | True <br>
+ *       | False <br>
+ *       | Neg(Formula) <br>
+ *       | Conj(Formula, Formula) <br>
+ *       | Disj(Formula, Formula) <br>
+ *       | Impl(Formula, Formula) <br>
+ *       | Iff(Formula, Formula) <p>
+ * </code>
  * 
  * @author  Sarah Mount
  * @version 1.0
