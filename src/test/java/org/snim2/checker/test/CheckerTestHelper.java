@@ -13,7 +13,7 @@ public class CheckerTestHelper {
 
 	public boolean checkFile(String filename) throws IOError, IOException {
 		Parser myParser = null;
-		InputStream input = getClass().getResourceAsStream("/" + filename);
+		InputStream input = this.getClass().getResourceAsStream("/" + filename);
 		myParser = new Parser(input);
 		input.close();
 		Formula formula = myParser.getAST();
