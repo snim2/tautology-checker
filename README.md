@@ -1,6 +1,8 @@
 Tautology checker
 =================
 
+[![Build Status](https://travis-ci.org/snim2/tautology-checker.png?branch=master)](https://travis-ci.org/snim2/tautology-checker)
+
 This is a simple tautology checker, written in Java, as a teaching
 tool.
 
