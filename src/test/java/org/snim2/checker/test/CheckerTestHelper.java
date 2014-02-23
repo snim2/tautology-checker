@@ -1,4 +1,4 @@
-package org.snim2.checker.tests;
+package org.snim2.checker.test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package org.snim2.checker.tests;
+package org.snim2.checker.test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -18,14 +18,14 @@ import org.snim2.checker.ast.Formula;
 import org.snim2.checker.parser.Parser;
 
 @RunWith(Parameterized.class)
-public class CheckerTestSyntaxError {
+public class TestCheckerSyntaxError {
 
 	private String input;
 
 	private boolean expected;
 
 
-	public CheckerTestSyntaxError(String input, Boolean expected) {
+	public TestCheckerSyntaxError(String input, Boolean expected) {
 		this.input = input;
 		this.expected = (boolean)expected;
 	}
